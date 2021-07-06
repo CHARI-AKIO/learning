@@ -10,7 +10,7 @@
        :key="item_id"
        >
        
-       <div v-if=item.item>
+       <div v-if=item.item class="pa-0 my-0">
         <v-list-item
         :to="item.to"
         exact
@@ -23,7 +23,7 @@
         </v-list-item>
        </div>
        
-       <div v-if=item.group>
+       <div v-if=item.group class="pa-0 my-0">
         <v-list-group
         :prepend-icon=item.icon
         no-action
@@ -69,7 +69,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; 2021/05/27</span>
+      <span>&copy; {{ new Date().getFullYear() }}/{{ new Date().getMonth() + 1}}/{{ new Date().getDate() }}</span>
     </v-footer>
   </v-app>
 </template>
@@ -141,13 +141,37 @@ export default {
           icon:'mdi-router-wireless',
           title:'7章',
           to:'/RDB_EXAM/7',
-        },],
         },
         {
-          to:"/",
-          item:true,
-          title:"test_title",
+          icon:'mdi-router-wireless',
+          title:'8章',
+          to:'/RDB_EXAM/8',
+        },
+        ],
+        },
+        {
+          group:true,
+          title:"七日でLinux",
           icon:"mdi-linux",
+          listitems:[
+            {
+              title:"一日目",
+              to:"/linux/1",
+              icon:"mdi-lead-pencil"
+            }
+          ],
+        },
+        {
+          group:true,
+          title:"Linuxおさらい",
+          icon:"mdi-linux",
+          listitems:[
+            {
+              title:"1",
+              to:"/linux_test/1",
+              icon:"mdi-lead-pencil",
+            }
+          ]
         },
 
       ],
