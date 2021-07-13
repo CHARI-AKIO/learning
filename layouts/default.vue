@@ -4,6 +4,7 @@
       v-model="drawer"
       fixed
       app
+      
     >
       <v-list
        v-for="(item,item_id) in list"
@@ -53,6 +54,8 @@
     <v-app-bar
       color="indigo"
       :clipped-left="clipped"
+      :collapse="!collapse"
+      :collapse-on-scroll="collapse"
       fixed
       app
       dark>
@@ -69,7 +72,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}/{{ new Date().getMonth() + 1}}/{{ new Date().getDate() }}</span>
+      <span>&copy; 2021/7/21</span>
     </v-footer>
   </v-app>
 </template>
@@ -81,6 +84,7 @@ export default {
   },
   data () {
     return {
+      collapse:true,
       clipped: false,
       drawer: false,
       fixed: false,
@@ -89,6 +93,7 @@ export default {
           item:true,
           icon: 'mdi-home',
           title: 'HOME',
+          to:"/"
         },
         {
           group:true,
