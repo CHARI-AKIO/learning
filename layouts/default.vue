@@ -4,7 +4,6 @@
       v-model="drawer"
       fixed
       app
-      
     >
       <v-list
        v-for="(item,item_id) in list"
@@ -152,6 +151,11 @@ export default {
           title:'8章',
           to:'/RDB_EXAM/8',
         },
+        {
+          icon:'mdi-router-wireless',
+          title:'10章',
+          to:'/RDB_EXAM/10',
+        }
         ],
         },
         {
