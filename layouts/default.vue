@@ -158,30 +158,30 @@ export default {
         }
         ],
         },
-        {
-          group:true,
-          title:"七日でLinux",
-          icon:"mdi-linux",
-          listitems:[
-            {
-              title:"一日目",
-              to:"/linux/1",
-              icon:"mdi-lead-pencil"
-            }
-          ],
-        },
-        {
-          group:true,
-          title:"Linuxおさらい",
-          icon:"mdi-linux",
-          listitems:[
-            {
-              title:"1",
-              to:"/linux_test/1",
-              icon:"mdi-lead-pencil",
-            }
-          ]
-        },
+        // {
+        //   group:true,
+        //   title:"七日でLinux",
+        //   icon:"mdi-linux",
+        //   listitems:[
+        //     {
+        //       title:"一日目",
+        //       to:"/linux/1",
+        //       icon:"mdi-lead-pencil"
+        //     }
+        //   ],
+        // },
+        // {
+        //   group:true,
+        //   title:"Linuxおさらい",
+        //   icon:"mdi-linux",
+        //   listitems:[
+        //     {
+        //       title:"1",
+        //       to:"/linux_test/1",
+        //       icon:"mdi-lead-pencil",
+        //     }
+        //   ]
+        // },
 
       ],
       Groups:[
