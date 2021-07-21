@@ -67,9 +67,8 @@
       </v-container>
     </v-main>
 
+    <ANSAREA/>
     <v-footer
-      :absolute="!fixed"
-      app
     >
       <span>&copy; 2021/7/21</span>
     </v-footer>
@@ -77,7 +76,11 @@
 </template>
 
 <script>
+import ANSAREA from '~/components/EXAM_ANS_AREA.vue'
 export default {
+    components:{
+    ANSAREA,
+    },
   mounted() {
     
   },

@@ -10,31 +10,31 @@
               <v-card-title primary-title>
                 <div>
                   <h3 class="headline mb-0">SQL</h3>
-                  <div>description</div>
+                  <div>Oracle問題集</div>
                 </div>
               </v-card-title>
               <v-card-actions>
-                <v-btn color="primary">text</v-btn>
-                <v-btn color="primary">text</v-btn>
+                <v-btn color="primary" to="/RDB_EXAM/home">DBA Bronze</v-btn>
+                <!-- <v-btn color="primary">text</v-btn> -->
               </v-card-actions>
             </v-card>
           </v-col>
 
           <v-col cols=6>
             <div class="my-5">
-              <v-card max-width="400" color="#1F7087" elevation-6>
+              <v-card max-width="400" elevation-6>
                 <v-img contain max-height="200" height="200" src="/java_logo_icon.png">
 
                 </v-img>
                 <v-card-title primary-title>
                   <div>
                     <h3 class="headline mb-0">Java</h3>
-                    <div>description</div>
+                    <div>いろいろやってみた</div>
                   </div>
                 </v-card-title>
                 <v-card-actions>
-                  <v-btn color="primary">text</v-btn>
-                  <v-btn color="primary">text</v-btn>
+                  <v-btn color="primary" to="/Java/primary/home">入門編</v-btn>
+                  <v-btn color="primary">応用編</v-btn>
                 </v-card-actions>
               </v-card>
             </div>
@@ -48,12 +48,12 @@
               <v-card-title primary-title>
                 <div>
                   <h3 class="headline mb-0">Nuxtjs+Vue</h3>
-                  <div>description</div>
+                  <div>導入から基礎知識まで</div>
                 </div>
               </v-card-title>
               <v-card-actions>
-                <v-btn color="primary">text</v-btn>
-                <v-btn color="primary">text</v-btn>
+                <v-btn color="primary">導入編</v-btn>
+                <v-btn color="primary">Example</v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -67,12 +67,12 @@
                 <v-card-title primary-title>
                   <div>
                     <h3 class="headline mb-0">Firebase + nuxt</h3>
-                    <div>description</div>
+                    <div>なんかいろいろあるやつ</div>
                   </div>
                 </v-card-title>
                 <v-card-actions>
-                  <v-btn color="primary">text</v-btn>
-                  <v-btn color="primary">text</v-btn>
+                  <v-btn color="primary"> デプロイまで</v-btn>
+                  <v-btn color="primary">home</v-btn>
                 </v-card-actions>
               </v-card>
             </div>

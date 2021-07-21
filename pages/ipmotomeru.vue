@@ -89,14 +89,12 @@ export default {
               masdc_array.push(0)
           }
           
-          console.log(masdc_array)
           var mas_array =[0,0,0,0]
           var count = 0;
           for(var i = 0;i<4 ;i++){
               for(var j = 1; j <= 8;j++){
-                    console.log(masdc_array[count] * 2 ** 7)
-                    mas_array[i] += Number(masdc_array[count]) * 2 ** (8 - j)
-                    count++
+                mas_array[i] += Number(masdc_array[count]) * 2 ** (8 - j)
+                count++
               }
           }
           this.mask_arr = mas_array
@@ -116,9 +114,7 @@ export default {
             this.min_network_addres[3] = this.min_network_addres[3] + 1
 
             for(let i= 0 ; i < 4 ;i++){
-                console.log((~this.mask_arr[i]) & 255)
                 this.max_network_addres.push(this.network_addres[i] + ((~this.mask_arr[i]) & 255)) 
-                console.log(this.network_addres[i] + ((~this.mask_arr[i]) & 255)) 
             }  
             this.max_network_addres[3] = this.max_network_addres[3] - 1
 

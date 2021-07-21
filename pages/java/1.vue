@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div  class="my-0">
         <v-sheet color="white">
 
         <pre v-highlightjs>
