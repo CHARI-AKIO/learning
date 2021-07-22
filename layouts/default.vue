@@ -119,6 +119,16 @@ export default {
         },
         {
           group:true,
+          title:"前期末事前対策",
+          listitems:[
+            {
+              title:"情報システム",
+              to:'2021前期情報セキュリティ問題/home'
+            }
+          ]
+        },
+        {
+          group:true,
           title:"DBA章末問題",
           icon:"mdi-database",
           listitems:[{
