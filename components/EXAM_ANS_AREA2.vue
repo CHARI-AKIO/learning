@@ -1,5 +1,5 @@
 <template>
-  <div :key='ref'>
+  <div>
     <v-footer
       :key='ref'
       app
@@ -54,9 +54,10 @@
 import { mapMutations } from 'vuex'
 export default {
   mounted() {
-    this.$store.commit('exams/selectorGetter')
-    this.$store.commit('exams/checkAns')
-    this.$store.commit('exams/boolcheck')
+    this.$store.commit('examd/selectorGetter')
+    this.$store.commit('examd/checkAns')
+    this.$store.commit('examd/boolcheck')
+
     setTimeout(() => {
       this.ref++
     }, 300);
@@ -64,25 +65,25 @@ export default {
   computed: {
     Anser:{
       get(){
-        return this.$store.getters['exams/ans']
+        return this.$store.getters['examd/ans']
       },
       set(value){
-        this.$store.commit('exams/getAns',value)
+        this.$store.commit('examd/getAns',value)
       }
     },
     next_bool:{
       get(){
-        return this.$store.getters['exams/next_bool']
+        return this.$store.getters['examd/next_bool']
       }
     },
     back_bool:{
       get(){
-        return this.$store.getters['exams/back_bool']
+        return this.$store.getters['examd/back_bool']
       }
     },
     selector:{
       get(){
-        return this.$store.getters['exams/items']
+        return this.$store.getters['examd/items']
       },
     }
   },
@@ -94,12 +95,12 @@ export default {
   },
   methods:{
     back(){
-      this.$store.commit('exams/back')
-      this.$store.commit('exams/boolcheck')
+      this.$store.commit('examd/back')
+      this.$store.commit('examd/boolcheck')
     },
     next(){
-      this.$store.commit('exams/next')
-      this.$store.commit('exams/boolcheck')
+      this.$store.commit('examd/next')
+      this.$store.commit('examd/boolcheck')
     },
     
   }

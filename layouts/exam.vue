@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="touch-action: manipulation">
     <v-navigation-drawer 
       v-model="drawer"
       fixed
@@ -67,7 +67,7 @@
       </v-container>
     </v-main>
 
-    <ANSAREA/>
+    <ANSAREA style="touch-action: manipulation"/>
     <v-footer
     >
       <span>&copy; 2021/7/21</span>
@@ -118,6 +118,24 @@ export default {
               title:"意欲問題４",
               to:'/java/4'
             },
+          ]
+        },
+          {
+          group:true,
+          title:"前期末事前対策",
+          listitems:[
+            {
+              title:"情報セキュリティ",
+              to:'/2021前期情報セキュリティ問題/home'
+            },
+            {
+              title:"システムデザイン",
+              to:'/2021前期システムデザイン問題/home'
+            },
+            {
+              title:"システム運用管理",
+              to:'/2021前期システム運用問題/home'
+            }
           ]
         },
         {

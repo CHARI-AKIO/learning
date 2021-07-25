@@ -8,13 +8,13 @@
         <v-card-title>問題 {{ number + 1 }} / {{que.length}} </v-card-title>
         <v-card-text> {{ que[number].que }} </v-card-text>
         <div v-for="(sec,s) in select" :key=s>
-        <v-card-text style="padding:4px; padding-left:16px;"> {{selector[s]}} : {{sec}} </v-card-text>
+          <v-card-text style="padding:4px; padding-left:16px;"> {{selector[s]}} : {{sec}} </v-card-text>
         </div>
       </v-card>
       <v-card flat class="mt-5">
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn large  to="result"  @click=check>採点</v-btn>
+          <v-btn large to="result" @click=check>採点</v-btn>
         </v-card-actions>
       </v-card>
   </div>
@@ -26,13 +26,13 @@ import { mapMutations } from 'vuex'
 export default {
   mounted() {
     {
-      this.$store.commit('exams/changepage',this.num)
       this.$store.commit('exams/clearAns')
+      this.$store.commit('exams/changepage',this.num)
       this.$store.commit('exams/queshuffle')
-      // this.$store.commit('exams/resetnumber')
+
       setTimeout(() => {
       this.ref++
-    }, 250);
+    }, 300);
     }
   },
 
@@ -59,7 +59,7 @@ export default {
   },
   data:() => {
     return {
-      num:"1",
+      num:"6",
       ref:0,
       selector:['ア','イ','ウ','エ','オ','カ','キ','ク','ケ','コ','サ'],
     }
@@ -67,12 +67,8 @@ export default {
   methods:{
     check(){
       this.$store.commit("exams/checkAns")
-      
-      setTimeout(() => {
-        this.$store.commit('exams/boolcheck')
-      }, 250);
-
-   }
+      this.$store.commit('exams/boolcheck')
+    }
   }
 }
 </script>

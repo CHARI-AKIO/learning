@@ -8,26 +8,31 @@
       <v-list
        v-for="(item,item_id) in list"
        :key="item_id"
-       >   
+       >
+       
        <div v-if=item.item class="pa-0 my-0">
         <v-list-item
         :to="item.to"
         exact
         >
+       
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>{{ item.title }}</v-list-item-content>
         </v-list-item>
        </div>
+       
        <div v-if=item.group class="pa-0 my-0">
         <v-list-group
         :prepend-icon=item.icon
         no-action
         >
+        
           <template v-slot:activator>
             <v-list-item-title>{{item.title}}</v-list-item-title>
           </template>
+
           <v-list-item
             v-for="(listitem,listitem_id) in item.listitems"
             :key=listitem_id
@@ -43,6 +48,7 @@
        </div>
 
       </v-list>
+
     </v-navigation-drawer>
     <v-app-bar
       color="indigo"
@@ -60,9 +66,9 @@
         <nuxt />
       </v-container>
     </v-main>
+
+    <ANSAREA style="touch-action: manipulation"/>
     <v-footer
-      :absolute="!fixed"
-      app
     >
       <span>&copy; 2021/7/21</span>
     </v-footer>
@@ -70,7 +76,11 @@
 </template>
 
 <script>
+import ANSAREA from '~/components/EXAM_ANS_AREA2.vue'
 export default {
+    components:{
+    ANSAREA,
+    },
   mounted() {
     
   },
@@ -133,52 +143,52 @@ export default {
           title:"DBA章末問題",
           icon:"mdi-database",
           listitems:[
-            {
-              icon:'mdi-router-wireless',
-              title:'1章',
-              to:'/RDB_EXAM/1',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'2章',
-              to:'/RDB_EXAM/2',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'3章',
-              to:'/RDB_EXAM/3',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'4章',
-              to:'/RDB_EXAM/4',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'5章',
-              to:'/RDB_EXAM/5',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'6章',
-              to:'/RDB_EXAM/6',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'7章',
-              to:'/RDB_EXAM/7',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'8章',
-              to:'/RDB_EXAM/8',
-            },
-            {
-              icon:'mdi-router-wireless',
-              title:'10章',
-              to:'/RDB_EXAM/10',
-            }
-          ],
+          {
+            icon:'mdi-router-wireless',
+            title:'1章',
+            to:'/RDB_EXAM/1',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'2章',
+            to:'/RDB_EXAM/2',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'3章',
+            to:'/RDB_EXAM/3',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'4章',
+            to:'/RDB_EXAM/4',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'5章',
+            to:'/RDB_EXAM/5',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'6章',
+            to:'/RDB_EXAM/6',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'7章',
+            to:'/RDB_EXAM/7',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'8章',
+            to:'/RDB_EXAM/8',
+          },
+          {
+            icon:'mdi-router-wireless',
+            title:'10章',
+            to:'/RDB_EXAM/10',
+          }
+        ],
         },
         // {
         //   group:true,
@@ -232,7 +242,7 @@ export default {
         {
           icon: 'mdi-router-wireless',
           title: 'Cisco_5/26_実技',
-          to: '/cisco_5_26'
+          to:'/cisco_5_26'
         },
       ],
       miniVariant: false,

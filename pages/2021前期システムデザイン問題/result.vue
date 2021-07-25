@@ -30,48 +30,48 @@
 export default {
   layout:"default",
   mounted(){
-    this.num = this.$store.getters['exams/session']
-    this.$store.commit('exams/setitem')
-    this.$store.commit('exams/checkAns')
+    this.num = this.$store.getters['examd/session']
+    this.$store.commit('examd/setitem')
+    this.$store.commit('examd/checkAns')
     setTimeout(() => {
       this.ref++
-    }, 300);
+    }, 250);
   },
   computed:{
 
     items:{
       set(){
-        this.$store.commit('exams/setitem')
+        this.$store.commit('examd/setitem')
         
       },
       get(){
-        return this.$store.getters['exams/resultItems']
+        return this.$store.getters['examd/resultItems']
       }
     },
     select:{
       get(){
-        return this.$store.getters['exams/select'][this.num]
+        return this.$store.getters['examd/select'][this.num]
       }
     },
     session:{
       get(){
         
-        return this.$store.getters['exams/session']
+        return this.$store.getters['examd/session']
       }
     },
     que:{
       get(){
-        return this.$store.getters['exams/que']
+        return this.$store.getters['examd/que']
       }
     },
     count:{
       get(){
-        return this.$store.getters['exams/count']
+        return this.$store.getters['examd/count']
       }
     },
     load_bool:{
       get(){
-        return this.$store.getters['exams/load_bool']
+        return this.$store.getters['examd/load_bool']
       }
     }
   },
@@ -96,7 +96,7 @@ export default {
             text:"解答",
             value:"anser"
           },
-          {
+        {
             text:"",
             value:"anser_common"
           },
@@ -104,7 +104,7 @@ export default {
             text:"正解",
             value:"example"
           },
-          {
+            {
             text:"",
             value:"example_common"
           }
@@ -113,7 +113,7 @@ export default {
   },
   methods:{
         clear(){
-        this.$store.commit('exams/clearAns')
+        this.$store.commit('examd/clearAns')
         // this.$store.dispatch('exams/clearAns')
         
     },
