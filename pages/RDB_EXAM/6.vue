@@ -59,7 +59,7 @@
           >
 
           <template  v-for="(A,a) in Q_1.ans">
-            <v-btn class="my-1" style="text-transform: none" :key="a" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
+            <v-btn class="my-1" style="text-transform: none" :key="a" height="50" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
           </template>
           </v-btn-toggle>
 

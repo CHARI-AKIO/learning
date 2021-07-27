@@ -1,6 +1,24 @@
 <template>
   <v-container l :key=Size >
         <v-row>
+          <v-col cols=12>
+            <!-- 特設ページ -->
+            <v-card class="my-5">
+              <v-img max-height="400" height="400" contain :src="testsp">
+              </v-img> 
+              <v-card-title primary-title>
+                <div>
+                  <h3 class="headline mb-0">テスト対策ページへ</h3>
+                  <div>3日目</div>
+                </div>
+              </v-card-title>
+              <v-card-actions>
+                <v-btn color="primary" height="100" to="/RDB_EXAM">DBA</v-btn>
+                <!-- <v-btn color="success" height="100" disabled>システム運用</v-btn> -->
+                <!-- <v-btn color="primary">text</v-btn> -->
+              </v-card-actions>
+            </v-card>
+          </v-col>
           <v-col cols=Size>
             <v-card class="my-5" max-width="400">
               <v-img max-height="200" height="200" contain src="/oracle_database_logo.png">
@@ -99,6 +117,9 @@
     },
     data:() =>  {
       return {
+
+        testsp:require('@/static/test_sp/to.png'),
+
         Size:6,
       selectedItem: 1,  
       items: [
@@ -109,6 +130,9 @@
       }
     },
     methods: {
+      none(){
+        return
+      },
       SizeSetter: function(){
         switch(this.$vuetify.breakpoint.name){
           case "xs": {this.Size = 12

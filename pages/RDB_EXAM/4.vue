@@ -83,7 +83,7 @@
                   <!-- 選択ボタン -->
                   <v-btn-toggle class="mx-1" v-model="Q_1.user_ans" color="blue" multiple>
                     <template v-for="(A,a) in Q_1.ans">
-                      <v-btn class="my-1" style="text-transform: none" :key="a" :disabled=button_state
+                      <v-btn class="my-1" style="text-transform: none" height="50" :key="a" :disabled=button_state
                         :x-small="buttonsize"> {{ A.value }} </v-btn>
                     </template>
                   </v-btn-toggle>

@@ -429,6 +429,8 @@ export const state = () => ({
 
         state.resultItems[state.session][i].name = ("問題 " + (i + 1))
       }
+      state.items = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ', 'キ', 'ク', 'ケ', 'コ', 'サ']
+
     }
     
     

@@ -5,9 +5,54 @@
         </div>
         <div align="center">
             <div>
-             準備中 
+             メンテナンス中
             </div>    
-             7/26 18:00 ~ 公開予定
         </div>
     </div>
 </template>
+<script>
+export default {
+	mounted() {
+		this.$store.commit('examu/clearAns')
+	},
+	data:() => {
+		return{
+		pages:[
+				{
+					name:'part1',
+					to:'/2021前期システム運用問題/1'
+				},
+				{
+					name:'part2',
+					to:'/2021前期システム運用問題/2'
+				},
+				{
+					name:'part3',
+					to:'/2021前期システム運用問題/3'
+				},
+				{
+					name:'part4',
+					to:'/2021前期システム運用問題/4'
+				},
+				{
+					name:'part5',
+					to:'/2021前期システム運用問題/5'
+				},
+				{
+					name:'part6',
+					to:'/2021前期システム運用問題/6'
+				},
+				{
+					name:'part7',
+					to:'/2021前期システム運用問題/7'
+				},
+
+
+			]
+		}
+	},
+	methods: {
+		none(){return}
+	}
+}
+</script>
