@@ -1,24 +1,40 @@
 <template>
   <v-container l :key=Size >
-        <v-row>
-          <v-col cols=12>
-            <!-- 特設ページ -->
+    <v-row>
+      <v-col cols="12">
+        <v-card class="my-5">
+          <v-card-title primary-title>
+            <div>
+              <h3 cl  ass="headline mb-0">特設</h3>
+              <div>進級試験対策ページ</div>
+            </div>
+          </v-card-title>
+          <v-card-actions>
+            <v-btn color="primary" to="/2021進級/Home">進級試験対策TOP</v-btn>
+            <!-- <v-btn color="primary">text</v-btn> -->
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12">
             <v-card class="my-5">
-              <v-img max-height="400" height="400" contain :src="testsp">
-              </v-img> 
+              <v-img max-height="200" height="200" contain src="/unity-masterbrand-black.png">
+              </v-img>
               <v-card-title primary-title>
                 <div>
-                  <h3 class="headline mb-0">テスト対策ページへ</h3>
-                  <div>3日目</div>
+                  <h3 cl  ass="headline mb-0">Unity</h3>
+                  <div>Unity 触ってみた</div>
                 </div>
               </v-card-title>
               <v-card-actions>
-                <v-btn color="primary" height="100" to="/RDB_EXAM">DBA</v-btn>
-                <!-- <v-btn color="success" height="100" disabled>システム運用</v-btn> -->
+                <v-btn color="primary">入門編</v-btn>
                 <!-- <v-btn color="primary">text</v-btn> -->
               </v-card-actions>
             </v-card>
-          </v-col>
+      </v-col>
+    </v-row>
+        <v-row>
           <v-col cols=Size>
             <v-card class="my-5" max-width="400">
               <v-img max-height="200" height="200" contain src="/oracle_database_logo.png">
@@ -32,7 +48,6 @@
               <v-card-actions>
                 <v-btn color="primary" to="/RDB_EXAM/home">DBA Bronze</v-btn>
                 <v-btn color="primary">DBA Silver</v-btn>
-
                 <!-- <v-btn color="primary">text</v-btn> -->
               </v-card-actions>
             </v-card>
@@ -99,8 +114,8 @@
 
         <v-row>
           <v-col>
-            <div >
-              <v-card class="my-10 pt-5">  
+            <div>
+              <v-card class="my-10 pt-5">
                      <v-img contain height="150"  src="v.png"></v-img>
                 <v-card-title> Vuetify.jsのすゝめ </v-card-title>
               </v-card>
@@ -121,7 +136,7 @@
         testsp:require('@/static/test_sp/to.png'),
 
         Size:6,
-      selectedItem: 1,  
+      selectedItem: 1,
       items: [
         { text: 'Real-Time', icon: 'mdi-clock' },
         { text: 'Audience', icon: 'mdi-account' },
@@ -141,7 +156,7 @@
           case 'md'||'lg'||'xl': this.Size = 6
           default: this.Size = 6
          }
-        
+
       }
 
     },

@@ -1,12 +1,19 @@
 <template>
     <div>
         <div class="text-h2"> Oracle DBA Bronze 問題 </div>
+            <v-card to="/RDB_EXAM/fortest" class="mt-5">
+                <v-card-title>
+                    ランダム 10 問題
+                </v-card-title>
+                <v-card-subtitle>
+                    解きなおしできません。腕試し！！
+                </v-card-subtitle>
+            </v-card>
         <div  v-for="(number,n) in numbers" :key="n">
             <v-card :to=number.to class="mt-5">
                 <v-card-title>
                     {{number.num}} 章 
                 </v-card-title>
-            
             </v-card>
         </div>
     
@@ -53,7 +60,7 @@ export default {
                 {
                     num:10,
                     to:'/RDB_EXAM/10'
-                }
+                },
             ],
         }
     },

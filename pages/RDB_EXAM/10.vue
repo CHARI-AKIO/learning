@@ -60,7 +60,7 @@
           >
 
           <template  v-for="(A,a) in Q_1.ans">
-            <v-btn class="my-1" style="text-transform: none" :key="a" height="50" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
+            <v-btn class="my-1" style="text-transform: none" :key="a" height="50" width="45" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
           </template>
           </v-btn-toggle>
 
@@ -157,10 +157,10 @@ export default {
         { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "Automatic Database Diagnostic Monitor(ADDM)が分析するのは、直近２つのスナップショットです。スナップショットが格納されているのはSYSAUX表領域です。SYSTEM表領域は、データディクショナリなどのOracleデータベースの管理情報が格納されている表領域です。それ以外の表領域はデフォルトでは存在しません。", ], Q_img:"",   img:"",   this_ans:[ 3 ],   ques:"Automatic Database Diagnostic Monitor(ADDM)が分析に使用する統計情報が格納されている表領域を選択してください。",   ans:[     { value:'a', text: "SYSTEM表領域", },     { value:'b', text: "SYS表領域", },     { value:'c', text: "ADDM表領域", },     { value:'d', text: "SYSAUX表領域", },     { value:'e', text: "AWR表領域", },  ] },
         { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "自動SQLチューニングアドバイザは、Oracle Database 11gからの機能です。自動メンテナンスタスクの１つであり、自動的に実行されます。いかに特徴を挙げます。", "・DMLは対象外である", "・システムメンテナンスウィンドウ（システムメンテナンス期間）で自動的に実行される", "・負荷の高いSQL問合わせを選択し、推奨を生成する", "・SQLプロファイルの作成や変更の推奨は自動で実装できる", "・索引の作成及びオプティマイザ統計のリフレッシュなどは手動で実装する必要がある", ], Q_img:"",   img:"",   this_ans:[ 1, 2 ],   ques:"自動SQLチューニングアドバイザの説明として、正しいものをすべて選択してください。",   ans:[     { value:'a', text: "SQLプロファイルの作成や変更の推奨を手動で行う必要がある", },     { value:'b', text: "システムメンテナンスウィンドウで自動実行される", },     { value:'c', text: "負荷の高いSQL問い合わせに対し、推奨事項を自動生成する", },     { value:'d', text: "索引の作成などの推奨を自動的に実装する", },     { value:'e', text: "DML分も分析対象に含める", },  ] },
         { code:true, codes:[ "MEMORY_TARGET=10G" ], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "MEMORY_TARGET初期化パラメータが設定されているということは、自動メモリー管理が有効となっていることを意味します。この場合に使用できるのは「メモリーアドバイザ」です。", ], Q_img:"",   img:"",   this_ans:[ 3 ],   ques:"以下のような初期パラメータが設定されている場合に、使用することができるアドバイザを選択してください",   ans:[     { value:'a', text: "SGAアドバイザ", },     { value:'b', text: "バッファキャッシュアドバイザ", },     { value:'c', text: "共有プールアドバイザ", },     { value:'d', text: "メモリーアドバイザ", },     { value:'e', text: "Javaプールアドバイザ", },  ] },
-        { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "各種アドバイザの特徴を挙げます", ], Q_img:"",   img:"https://thumb.ac-illust.com/f2/f2c985d9f40c2f46cc5de445ff485fcf_t.jpeg",   this_ans:[ 1, 2 ],   ques:"各アドバイザの説明として、正しいものを2つ選択してください。",   ans:[     { value:'a', text: "a. SQLチューニングアドバイザ：負荷の高いSQL文を識別し、スキーマチューニングを行う", },     { value:'b', text: "b. メモリーアドバイザ：Oracleインスタンスに割り当てるターゲットメモリー容量に関するアドバイザを行う", },     { value:'c', text: "c. UNDOアドバイザ：処理の不可状況に合わせてUNDO表領域のサイズを診断しアドバイスを行う", },     { value:'d', text: "d. セグメントアドバイザ：セグメントの構造をし阿部て索引の作成などを診断し、アドバイスを行う", },     { value:'e', text: "e. 平均リカバリ時間(MTTR)アドバイザ：メディア障害が起きたときに最短のリカバリ時間を診断しアドバイスを行う", },  ] },
+        { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "各種アドバイザの特徴を挙げます", ], Q_img:"",   img:"https://thumb.ac-illust.com/f2/f2c985d9f40c2f46cc5de445ff485fcf_t.jpeg",   this_ans:[ 1, 2 ],   ques:"各アドバイザの説明として、正しいものを2つ選択してください。",   ans:[     { value:'a', text: "SQLチューニングアドバイザ：負荷の高いSQL文を識別し、スキーマチューニングを行う", },     { value:'b', text: "メモリーアドバイザ：Oracleインスタンスに割り当てるターゲットメモリー容量に関するアドバイザを行う", },     { value:'c', text: "UNDOアドバイザ：処理の不可状況に合わせてUNDO表領域のサイズを診断しアドバイスを行う", },     { value:'d', text: "セグメントアドバイザ：セグメントの構造を調べて索引の作成などを診断し、アドバイスを行う", },     { value:'e', text: "平均リカバリ時間(MTTR)アドバイザ：メディア障害が起きたときに最短のリカバリ時間を診断しアドバイスを行う", },  ] },
         { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "セグメントアドバイザを使用すると、表領域内のセグメントに対して縮小可能かどうかを診断できます。セグメントの縮小または、再編成が推奨された場合、それを実装することもできます。", ], Q_img:"",   img:"",   this_ans:[ 0, 1 ],   ques:"セグメントアドバイザの説明として正しいものを２つ選択してください",   ans:[     { value:'a', text: "縮小可能なセグメントがあるかどうかを診断する", },     { value:'b', text: "セグメントの縮小あるいは再編を行う", },     { value:'c', text: "データファイルのアクセス回数やI/Oの集中率を報告する", },     { value:'d', text: "データベース全体のデータの成長率や断片化についてアドバイスする", },  ] },
         { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "UNDOアドバイザは、UNDO保存期間やシステムアクティビティの統計情報から、UNDO表領域に必要な最小サイズや推奨サイズを提案します。", "e. FAST_START_UNDO_TARGETという初期化パラメータは存在しません", ], Q_img:"",   img:"",   this_ans:[ 0 ],   ques:"UNDOアドバイザの推奨事項として正しいものを選択してください。",   ans:[     { value:'a', text: "UNDO表領域のサイズ", },     { value:'b', text: "UNDO保存の保証", },     { value:'c', text: "UNDO保存期間", },     { value:'d', text: "平均UNDO生成サイズ", },     { value:'e', text: "FAST_START_UNDO_TARGETの推奨値", },  ] },
-        { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "SQLチューニングアドバイザは、特定のSQL文またはSQL文のセットに対し、効率を高めるための推奨事項を提供します。 SQLチューニングアドバイザで生成される推奨事項に次の4つがあります。 ", "・SQLプロファイル", "・新しい索引の作成", "・オプティマイザ統計のリフレッシュ", "・SQLの再構築", ], Q_img:"",   img:"",   this_ans:[ 0, 1, 2 ],   ques:"SQLチューニングアドバイザの推奨事項として、正しいものを３つ選択してください",   ans:[     { value:'a', text: "索引の作成", },     { value:'b', text: "SQLの最高t句", },     { value:'c', text: "統計の再集計", },     { value:'d', text: "マテリアライズドビューの作成", },     { value:'e', text: "スナップショットの作成", },  ] },
+        { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "SQLチューニングアドバイザは、特定のSQL文またはSQL文のセットに対し、効率を高めるための推奨事項を提供します。 SQLチューニングアドバイザで生成される推奨事項に次の4つがあります。 ", "・SQLプロファイル", "・新しい索引の作成", "・オプティマイザ統計のリフレッシュ", "・SQLの再構築", ], Q_img:"",   img:"",   this_ans:[ 0, 1, 2 ],   ques:"SQLチューニングアドバイザの推奨事項として、正しいものを３つ選択してください",   ans:[     { value:'a', text: "索引の作成", },     { value:'b', text: "SQLの再構築", },     { value:'c', text: "統計の再集計", },     { value:'d', text: "マテリアライズドビューの作成", },     { value:'e', text: "スナップショットの作成", },  ] },
         { code:false, codes:[], acode:false, acodes:[], user_ans:[], icon:"", reveal:false, Explanation:[ "パフォーマンス情報はSGA上にあり、流動的に変化するため、後から参照できません。データベースを保存してデータを蓄積することで後から参照できます。 データベースは、データベースの状態とパフォーマンス情報を、AWRスナップショットとして、デフォルトでは60分ごとに収集していきます。AWRスナップショットは、MMONバックグラウンドプロセスによって収集され、SYSAUX表領域に存在するAWR（自動ワークロードリポジトリ）に格納されます。 ", ], Q_img:"",   img:"",   this_ans:[ 0, 1, 4 ],   ques:"AWRスナップショットについて、正しい説明を３つ選択してください",   ans:[     { value:'a', text: "デフォルトでの60分に1回取得される", },     { value:'b', text: "SYSSUX表領域に格納される", },     { value:'c', text: "SYSTEM表領域のデータディクショナリに格納される", },     { value:'d', text: "SGAに保存される", },     { value:'e', text: "MMONが収集する", },  ] },
       ],
         Qs2:[
@@ -200,8 +200,7 @@ export default {
         for(let i=0;i<this.Qs.length;i++){
             // this.Qs[i].code=false
             // this.Qs[i].codes=[],
-            this.Qs[i].acode=false
-            this.Qs[i].acodes=[]
+
             this.Qs[i].user_ans=[]
             this.Qs[i].reveal=false
             this.Qs[i].color=""
@@ -245,7 +244,6 @@ export default {
                 }
         for(let i=0;i<this.Qs.length;i++){
             this.Qs[i].Q_imgq = this.Qs3[i].Q_imgq
-            console.log(this.Qs3[i].Q_imgq)
         }
     },
 

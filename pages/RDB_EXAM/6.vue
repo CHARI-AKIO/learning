@@ -59,7 +59,7 @@
           >
 
           <template  v-for="(A,a) in Q_1.ans">
-            <v-btn class="my-1" style="text-transform: none" :key="a" height="50" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
+            <v-btn class="my-1" style="text-transform: none" :key="a" width="45" height="50" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
           </template>
           </v-btn-toggle>
 
@@ -209,8 +209,7 @@ export default {
         for(let i=0;i<this.Qs.length;i++){
             // this.Qs[i].code=false
             // this.Qs[i].codes=[],
-            this.Qs[i].acode=false
-            this.Qs[i].acodes=[]
+
             this.Qs[i].user_ans=[]
             this.Qs[i].reveal=false
             this.Qs[i].color=""

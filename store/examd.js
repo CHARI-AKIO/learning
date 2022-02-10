@@ -15,12 +15,26 @@ export const state = () => ({
       [],
       [],
       [],
+      [],
+      [],
+      [],
+      [],
+      [],
+
       []
     ],
     ans: [
       [""],
       [""],
       [""],
+      [""],
+      [""],
+      [""],
+      [""],
+      [""],
+      [""],
+      [""],
+      ["","","","","",""],
       [""],
       [""],
       [""],
@@ -213,7 +227,83 @@ export const state = () => ({
           image:"/2021EXAM/6-1.png",
           img:"true",
         },
-      ]
+      ],
+      //8
+      [],
+      //9
+      [],
+      //10
+      [
+        {
+          que:"インターネット上のWebサイトを閲覧する際にサーバーとクライアント間の通信で利用される",
+          ans:"ア"
+        },
+        {
+          que:"メールの送信に利用される",
+          ans:"イ",
+        },
+        {
+          que:"メールの受信に利用される(メールをダウンロードする)",
+          ans:"ウ",
+        },
+        {
+          que:"メールの受信に利用される(キャッシュのみを管理する)",
+          ans:"エ",
+        },
+        {
+          que:"リモートでサーバにログインする際に利用される",
+          ans:"オ",
+        },
+        {
+          que:"ファイル転送に利用される",
+          ans:"カ",
+        },
+
+      ],
+
+      //11
+      [
+        {
+          que:"IPアドレスを使用して送信元から宛先までデータを配送する",
+          ans:"ア"
+        },
+        {
+          que:"宛先までのルートが使用可能かどうかの確認などを行う。TCP/IPネットワーク上で相手のデバイスまでの通信が可能かどうかを確認するためのpingコマンドはこれを利用している",
+          ans:"イ"
+        },
+        {
+          que:"データのマルチキャスト送信で宛先の端末のグループを制御する",
+          ans:"ウ"
+        },
+        {
+          que:"暗号化通信を行う",
+          ans:"エ"
+        },
+        {
+          que:"IPアドレスからMACアドレスを取得する",
+          ans:"オ"
+        },
+        {
+          que:"MACアドレスからIPアドレスを取得する",
+          ans:"カ"
+        },
+      ],
+
+      //12
+      [
+        {
+          que:"ほとんどのLANで使用されているプロトコル",
+          ans:"ア"
+        },
+        {
+          que:"2台の機器を接続して通信を行うためのプロトコル",
+          ans:"イ"
+        },
+        {
+          que:"RS-232などのシリアル回線からTCP/IPネットワークに接続するためのプロトコル",
+          ans:"ウ"
+        },
+      ],
     ],
     select: [
         [
@@ -273,6 +363,40 @@ export const state = () => ({
           "開発技術",
           "プロジェクトマネジメント"
         ],
+
+        //8
+        [],
+
+        //9
+        [],
+
+        //10
+        [
+          "HTTP(Hypertext Transfer Protocol)",
+          "SMTP(Simple Mail Transfer Protocol)",
+          "POP3(Post Office Protocol Version 3)",
+          "IMAP(Internet Message Access Protocol)",
+          "TELNET",
+          "FTP"
+        ],
+
+        //11
+        [
+          "IP(Internet Protocol)",
+          "ICMP(Internet Control Message Protocol)",
+          "IGMP(Internet Group Management Protocol)",
+          "IPsec(Internet Group Management Protocol)",
+          "ARP(Address Resolution Protocol)",
+          "RARP(Recerse Address Resolution Protocol)",
+        ],
+        
+        //12
+        [
+          "イーサネット",
+          "PPP(Pointo-to-Point Protocol)",
+          "SLIP(Serial Line Internet Protocol)"
+        ]
+
     ],
     items: ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ', 'キ', 'ク', 'ケ', 'コ', 'サ'],
   })

@@ -1,6 +1,6 @@
 
 <template>
-  <v-container>
+  <v-container class="ma-0 pa-0">
 
     <v-row >
       <v-col>
@@ -23,13 +23,14 @@
         class="my-2"
         
         :key="q"
+
         >
           <v-card flat :color=Q_1.color>
           <v-card-title >問題 8 - {{ q + 1 }}<v-icon>{{ Q_1.icon }}</v-icon></v-card-title>  
           </v-card>
           <v-card-text>{{ Q_1.ques }}</v-card-text>
           <div v-if=Q_1.Q_imgq>  
-            <v-img  contain max-height="300" :src=Q_1.Q_img ></v-img>
+            <v-img contain max-height="300" :src=Q_1.Q_img ></v-img>
           </div>
            <v-card class="py-1 mx-3" v-if=Q_1.code dark>
            <template v-for="(Co_1,C) in Q_1.codes">
@@ -60,7 +61,7 @@
           >
 
           <template  v-for="(A,a) in Q_1.ans">
-            <v-btn class="my-1" style="text-transform: none" :key="a" height="50" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
+            <v-btn class="my-1" style="text-transform: none" :key="a" height="50" width="45" :disabled=button_state :x-small="buttonsize"> {{ A.value }} </v-btn>
           </template>
           </v-btn-toggle>
 
@@ -202,8 +203,6 @@ export default {
         for(let i=0;i<this.Qs.length;i++){
             // this.Qs[i].code=false
             // this.Qs[i].codes=[],
-            this.Qs[i].acode=false
-            this.Qs[i].acodes=[]
             this.Qs[i].user_ans=[]
             this.Qs[i].reveal=false
             this.Qs[i].color=""

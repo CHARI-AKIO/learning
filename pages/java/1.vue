@@ -71,7 +71,7 @@ public class iyoku_1 {
 <script>
 export default {
         mounted() {
-
+            
             },
     }
 </script>
