@@ -11,7 +11,7 @@
         <v-divider></v-divider>
         <v-card-actions>
           <div class="mx-1" :key=id v-for="(i,id) in item.pages">
-            <v-btn :to=item.to[id]>{{ i }}</v-btn>
+            <v-btn :disabled=item.disabled[id] :to=item.to[id]>{{ i }}</v-btn>
           </div>
         </v-card-actions>
       </v-card>
@@ -28,20 +28,25 @@ export default {
           title: "システム運用管理",
           date: "1日目 2/14",
           pages:  ["基本コマンド","vim操作","ShellScript"],
-          to:["システム運用管理/基本コマンド","trouble","IP"]
+          to:["システム運用管理/基本コマンド","trouble","IP"],
+          disabled:[false,true,true]
 
         },
         {
           title: "Java(プログラミング技法)",
           date: "2日目 2/15",
           pages: ["基本編","socket","章末ランダム"],
-          to:["プログラミング技法/Home","trouble","IP"]
+          to:["プログラミング技法/Home","trouble","IP"],
+          disabled:[false,true,true]
+
         },
         {
           title: "テクニカルスキル",
           date: "3日目 2/16",
           pages: ["対策一覧","トラブルシューティング","IP計算"],
-          to:["テクニカルスキル/Home","trouble","IP"]
+          to:["テクニカルスキル/Home","trouble","IP"],
+          disabled:[false,true,true]
+
         }
       ]
     }

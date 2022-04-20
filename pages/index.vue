@@ -5,13 +5,11 @@
         <v-card class="my-5">
           <v-card-title primary-title>
             <div>
-              <h3 cl  ass="headline mb-0">特設</h3>
-              <div>進級試験対策ページ</div>
+              <div>授業ノート</div>
             </div>
           </v-card-title>
           <v-card-actions>
-            <v-btn color="primary" to="/2021進級/Home">進級試験対策TOP</v-btn>
-            <!-- <v-btn color="primary">text</v-btn> -->
+            <v-btn color="primary" to="/ClassNote/">授業メモ</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>

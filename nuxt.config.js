@@ -17,10 +17,13 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-      {
-    src: '~/node_modules/highlight.js/styles/qtcreator-light.css',
-    lang: 'css'
-  },
+    {
+      src: '~/node_modules/highlight.js/styles/qtcreator-light.css',
+      lang: 'css'
+    },
+    {
+      src : '~assets/css/styles.scss'
+    }
 
   ],
 
